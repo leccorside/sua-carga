@@ -1,0 +1,57 @@
+
+<ion-content>
+
+  <ion-icon name="close" class="icofechar" (click)="fecharModal()"></ion-icon>
+
+    <ion-icon [ngStyle]="{'display': display3}" name="heart-outline" id="vazio" class="coracao-vazio" (click)="addFavoritos()"></ion-icon>
+    <ion-icon [ngStyle]="{'display': display4}" name="heart" id="cheio" class="coracao-cheio" (click)="deleteFavoritos()"></ion-icon>
+
+  <div class="imgtop">
+    <img src="{{ponto.foto}}" class="img1">
+
+    <ion-item class="itemdist">
+      <ion-badge class="preco-produto" item-start>{{distancia}}</ion-badge>
+      <ion-badge class="preco-produto" item-end>{{tempo}}</ion-badge>
+    </ion-item>
+  </div>
+  
+  <div class="dados">
+    <h3>{{ponto.nome}}</h3>
+
+    <p>
+      <b>Categoria:</b><br>
+      {{ponto.categoria}}<br><br>
+
+      <b>Funcionamento:</b><br>
+      {{ponto.funcionamento}}<br><br>
+
+      <b>Site:</b><br>
+      {{ponto.site}}<br><br>
+
+      <b>Contato:</b><br>
+      {{ponto.telefone}}<br><br>
+
+      <b>E-mail:</b><br>
+      {{ponto.email}}<br><br>
+
+      <b>Endereço:</b><br>
+      {{ponto.endereco}}<br><br>
+
+      <b>Descrição:</b><br>
+      {{ponto.descricao}}
+    </p>
+
+
+    
+  </div>
+
+  <div class="mapa">
+    <div id="map22">
+    </div>
+
+    <button ion-button icon-start class="btnposition" (click)="abrirMapa()">
+      <ion-icon name="navigate"></ion-icon>
+      Abrir mapa
+    </button>
+  </div>
+</ion-content>

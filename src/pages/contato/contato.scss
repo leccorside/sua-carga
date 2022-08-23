@@ -1,0 +1,48 @@
+page-contato {
+
+    .form{
+        text-align: center;
+        margin-top: -20px;
+        padding: 0 30px;
+    }
+
+    .form ion-icon{
+        font-size: 170px;
+        height: 100px;
+    }
+
+    .form p{
+        color: #2D2D2D;
+        font-size: 25px;
+        font-weight: 700;
+        margin: 0;
+    }
+
+    .formulario{
+        margin-top: 20px;
+    }
+
+    .input2{
+        border: 1px solid #707070;
+        border-radius: 20px;
+        margin: 0 !important;
+        margin-bottom: 15px !important;
+        padding: 0 15px;
+        font-size: 17px;
+    }
+
+    .inputmsg{
+        border: 1px solid #707070;
+        border-radius: 20px;
+        margin: 0 !important;
+        margin-bottom: 15px !important;
+        padding: 0 15px;
+        font-size: 17px;
+        height: 100px;
+    }
+
+    .btn2{
+        height: 40px;
+    }
+
+}

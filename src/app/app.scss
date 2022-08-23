@@ -1,16 +1,121 @@
-// http://ionicframework.com/docs/theming/
+.fecharmenu {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    z-index: 999;
+    font-size: 25px;
+    padding: 15px;
+}
 
+.infos{
+    position: absolute;
+    bottom: 20px;
+    z-index: 999999999;
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto;
+    left: 17%;
+}
 
-// App Global Sass
-// --------------------------------------------------
-// Put style rules here that you want to apply globally. These
-// styles are for the entire app and not just one component.
-// Additionally, this file can be also used as an entry point
-// to import other Sass files to be included in the output CSS.
-//
-// Shared Sass variables, which can be used to adjust Ionic's
-// default Sass variables, belong in "theme/variables.scss".
-//
-// To declare rules for a specific mode, create a child rule
-// for the .md, .ios, or .wp mode classes. The mode class is
-// automatically applied to the <body> element in the app.
+.favo{
+    font-size: 30px;
+    position: relative;
+    top: 5px;
+    margin-right: 10px;
+}
+
+  .bateria1{
+    width: 100%;
+    border: 2px solid #808080;
+    height: 60px;
+    padding: 0 4px;
+    border-radius: 5px;
+    position: relative;
+  }
+
+  .bateria2{
+    background: linear-gradient(90deg, rgba(45,147,51,1) 0%, rgba(82,194,89,1) 53%, rgba(101,241,128,1) 100%);
+    height: 48px;
+    position: relative;
+    top: 4px;
+    animation: full2 5s linear infinite;
+  }
+
+  .bateria3{
+    background: linear-gradient(90deg, rgba(45,147,51,1) 0%, rgba(82,194,89,1) 53%, rgba(101,241,128,1) 100%);
+    height: 48px;
+    position: relative;
+    top: 4px;
+  }
+
+  .bateria2 span{
+    position: absolute;
+    top: 32%;
+    left: 43%;
+    color: #000;
+  }
+
+  .bateria3 span{
+    position: absolute;
+    top: 32%;
+    left: 43%;
+    color: #000;
+  }
+
+  @keyframes full2 {
+    0% {
+      width: 0%;
+    }
+    25% {
+      width: 24%;
+    }
+    50% {
+      width: 48%;
+    }
+    75% {
+      width: 72%;
+    }
+    100% {
+      width: 96%;
+    }
+  }
+
+.ponta {
+    background: #808080;
+    width: 15px;
+    height: 30px;
+    border-radius: 0 5px 5px 0;
+    right: 10px;
+    position: relative;
+    top: 15px;
+}
+
+.logo{
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.logo img{
+  width: 100%;
+  max-width: 190px;
+}
+
+.icomenu {
+  width: 25px;
+  position: relative;
+  top: 7px;
+  margin-right: 7px;
+}
+
+.spanmenu{
+  font-weight: 700;
+  font-size: 18px;
+  color: #474747;
+}
+
+/*.my-modal-class{
+    padding: 100% 10% 0 10%;
+    background: rgba(0,0,0,0.3);
+}*/
+

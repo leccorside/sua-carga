@@ -1,0 +1,74 @@
+
+<ion-content>
+
+  <ion-slides pager>
+
+    <ion-slide>
+      <div class="topo">
+        <span (click)="pular()" class="pular">Pular</span>
+        <!--<img src="../../assets/imgs/intro1.png" class="fundointro1">-->
+        <img src="../../assets/imgs/slide1.png" class="imgintro1">
+
+        <div class="info">
+          <h3>
+            Mapas com pontos<br>
+            de recarga
+          </h3>
+          <p>
+            Mapa do brasil com os pontos de<br>
+            recarga mais próximos de você
+          </p>
+        </div>
+        
+      </div>
+      <img src="../../assets/imgs/bt1.png" class="circulo">
+      <img src="../../assets/imgs/rigth.png" class="rigth" (click)="proximo()">
+    </ion-slide>
+  
+    <ion-slide>
+      <div class="topo2">
+        <span (click)="pular()" class="pular">Pular</span>
+        <!--<img src="../../assets/imgs/intro1.png" class="fundointro1">-->
+        <img src="../../assets/imgs/slide2.png" class="imgintro1">
+
+        <div class="info">
+          <h3>
+            Você visualiza os<br>
+            status dos pontos
+          </h3>
+          <p>
+            Você poderá visualizar se o ponto<br>
+            de recarga está disponível ou não     
+          </p>
+        </div>
+      </div>
+      <img src="../../assets/imgs/bt2.png" class="circulo">
+      <img src="../../assets/imgs/left.png" class="left" (click)="anterior()">
+      <img src="../../assets/imgs/rigth.png" class="rigth" (click)="proximo()">
+    </ion-slide>
+  
+    <ion-slide>
+      <div class="topo3">
+        <!--<img src="../../assets/imgs/intro1.png" class="fundointro1">-->
+        <img src="../../assets/imgs/slide3.png" class="imgintro1">
+
+        <div class="info">
+          <h3>
+            Chegue no local e<br>
+            realize sua recarga
+          </h3>
+          <p>
+            Basta ler o código QR Code e<br>
+            começar sua recarga   
+          </p>
+
+          <button ion-button round class="btn2" (click)="pular()">Começar</button>
+        </div>
+      </div>
+      <img src="../../assets/imgs/bt3.png" class="circulo">
+      <img src="../../assets/imgs/left.png" class="left" (click)="anterior()">
+    </ion-slide>
+  
+  </ion-slides>
+
+</ion-content>

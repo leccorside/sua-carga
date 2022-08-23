@@ -1,0 +1,58 @@
+
+<ion-content>
+
+  <div class="menu">
+    <ion-icon name="menu" class="icomenu2" menuToggle></ion-icon>
+  </div>
+
+  <div class="logado" *ngFor="let member of members" >
+
+    <div class="topo">
+      <img src="https://developeranddesigner.com.br/santacarga/api/pontos/fotos/bg-perfil2.jpg" class="topofoto">
+    </div>
+
+    <div class="foto">
+      <img src="{{member.foto}}">
+      <ion-icon name="camera" class="camera" color="primary" (click)="presentActionSheet()"></ion-icon>
+    </div>
+
+
+   
+    <div padding>
+      <ion-segment [(ngModel)]="dados">
+        <ion-segment-button value="meusdados">
+          Meus dados
+        </ion-segment-button>
+        <ion-segment-button value="senha">
+          Alterar senha
+        </ion-segment-button>
+      </ion-segment>
+    </div>
+
+    <div [ngSwitch]="dados" class="dadosgerais">
+      <ion-list *ngSwitchCase="'meusdados'">
+        <div class="form1">
+          <p class="p1">Dados pessoais</p>
+          <ion-input type="text" class="inputlogin" placeholder="Nome" [(ngModel)]="nome" value="{{member.nome}}"></ion-input>
+
+          <ion-input type="text" class="inputlogin" placeholder="E-mail" [(ngModel)]="email" value="{{member.email}}"></ion-input>
+
+          <ion-input class="inputlogin" placeholder="Telefone" type="text" [(ngModel)]="telefone" value="{{member.telefone}}" maxlength="15" [brmasker]="{phone: true}"></ion-input>
+          <button ion-button round class="btn1" (click)="salvardados()">Salvar</button>
+        </div>
+      </ion-list>
+
+      <ion-list *ngSwitchCase="'senha'">
+        <div class="form1">
+          <p class="p1">Altere sua senha</p>
+          <ion-input type="password" class="inputlogin" placeholder="Senha atual" [(ngModel)]="senhaatual"></ion-input>
+          <ion-input type="password" class="inputlogin" placeholder="Nova senha" [(ngModel)]="novasenha"></ion-input>
+          <button ion-button round class="btn1" (click)="salvarsenha()">Salvar</button>
+        </div>
+      </ion-list>
+    </div>
+
+
+  </div>
+
+</ion-content>

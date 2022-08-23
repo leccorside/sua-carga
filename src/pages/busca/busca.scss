@@ -1,0 +1,75 @@
+page-busca {
+
+    ion-content{
+        background-image: url('../../assets/imgs/bg-busca.png');
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .busca{
+        padding: 50px 20px 20px;
+        margin-top: 30px;
+    }
+
+    .icofechar{
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        z-index: 999;
+        font-size: 25px;
+    }
+
+    .nadabuscado{
+        text-align: center;
+        margin-top: 50px;
+    }
+
+    .icobusca{
+        font-size: 100px;
+    }
+
+    .inputbusca {
+        border: 1px solid #CECECE;
+        border-radius: 50px;
+        padding: 0;
+        -webkit-box-shadow: 2px 2px 7px rgba(89, 89, 89, 0.3);
+        -moz-box-shadow: 2px 2px 7px rgba(89, 89, 89, 0.3);
+        box-shadow: 2px 2px 7px rgba(89, 89, 89, 0.3);
+        position: relative;
+    }
+
+    .btn-fechar {
+        position: absolute;
+        z-index: 999999;
+        top: 5px;
+        right: 5px;
+        padding: 10px;
+    }
+
+    ion-searchbar{
+        padding: 5px !important;
+    }
+
+    .campobusca input{
+        background: transparent !important;
+        box-shadow: none !important;
+    }
+
+    .itemdist{
+        margin-top: -40px;
+        background: transparent;
+    }
+
+    ion-card-title{
+        font-size: 19px !important;
+        font-weight: 700;
+    }
+
+    .catponto{
+        color: #83AB38;
+    }
+
+   
+
+}

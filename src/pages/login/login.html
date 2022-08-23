@@ -1,0 +1,32 @@
+
+<ion-content>
+
+  <div class="topo">
+    <!--<img src="../../assets/imgs/intro1.png" class="fundointro1">-->
+    <div class="logo">
+      <img src="../../assets/imgs/logo-vertical.png" class="imgintro1">
+    </div>
+
+    <div class="form">
+
+      <label class="label1">Faça login</label>
+      <div class="campos">
+        <ion-input type="text" class="inputlogin" placeholder="E-mail" [(ngModel)]="email"></ion-input>
+        <ion-input type="password" class="inputlogin" placeholder="Senha" [(ngModel)]="senha"></ion-input>
+        <button ion-button round class="btn2" (click)="login()">Entrar</button>
+
+        <span class="esqueci" (click)="esquecisenha()">Esqueci a senha</span>
+
+      </div>
+   
+    </div>
+    
+  </div>
+
+  <div class="nav2">
+    Ainda não tem cadastro?<br>
+    <span (click)="cadastro()">Cadastre-se</span>  
+  </div>
+
+
+</ion-content>

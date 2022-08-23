@@ -1,0 +1,52 @@
+<ion-icon name="close" class="icofechar" (click)="fecharModal()"></ion-icon>
+
+<ion-content>
+
+  <div class="busca">
+
+    <div class="inputbusca">
+      <ion-searchbar 
+      (ionInput)="onSearch($event)" 
+      class="campobusca" 
+      [(ngModel)]="searchQuery" 
+      placeholder="Digite sua busca...">
+      </ion-searchbar>
+    </div>
+
+      <div class="card2" *ngIf="pontos.length > 0; else estadoVazio">
+        <ion-card *ngFor="let ponto of pontos" (click)="openDetalhes(ponto, distancia, tempo)">
+          <img src="{{ponto.foto}}"/>
+
+          <!--<ion-item class="itemdist">
+            <ion-badge class="preco-produto" item-start>{{distancia}}</ion-badge>
+            <ion-badge class="preco-produto" item-end>{{tempo}}</ion-badge>
+          </ion-item>-->
+
+          <ion-card-content>
+            <ion-card-title>
+              {{ponto.nome}}
+            </ion-card-title>
+
+              <p class="catponto">{{ponto.categoria}}</p>
+              <p class="preco-produto">{{ponto.endereco}}</p>
+
+          </ion-card-content>
+        </ion-card>
+      </div>
+
+
+    <div *ngIf="isLoading" text-center passing class="load">
+      <ion-spinner></ion-spinner>
+    </div>
+
+
+    <ng-template #estadoVazio>
+      <div class="nadabuscado">
+        <ion-icon name="search" color="primary" class="icobusca"></ion-icon>
+        <h3>Faça sua busca!</h3>
+      </div>
+    </ng-template>
+
+  </div>
+
+</ion-content>

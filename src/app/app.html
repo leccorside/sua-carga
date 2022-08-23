@@ -1,16 +1,84 @@
+<div id="status"></div>  
+
 <ion-menu [content]="content" type="overlay">
-  <ion-header>
-    <ion-toolbar>
-      <ion-title>Menu</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
   <ion-content>
-    <ion-list>
+
+    <ion-icon name="close" class="fecharmenu" (click)="closeMenu()"></ion-icon>
+
+    <div class="logo">
+      <img src="../assets/imgs/logo-vertical.png">
+    </div>
+
+
+   <!-- <ion-list>
       <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
         {{p.title}}
       </button>
+    </ion-list>-->
+
+    <ion-list no-lines>
+      <button menuClose ion-item (click)="perfil()">
+        <img src="../assets/imgs/perfil.png" class="icomenu">
+        <span class="spanmenu">Perfil</span>
+      </button>
+      <button menuClose ion-item (click)="mapa()">
+        <img src="../assets/imgs/mapa.png" class="icomenu">
+        <span class="spanmenu">Mapa</span>
+      </button>
+      <button menuClose ion-item (click)="lista()">
+        <img src="../assets/imgs/lista.png" class="icomenu">
+        <span class="spanmenu">Pontos de recarga</span>  
+      </button>
+      <button menuClose ion-item (click)="guia()">
+        <img src="../assets/imgs/guia.png" class="icomenu">
+        <span class="spanmenu">Guia comercial</span>  
+      </button>
+      <button menuClose ion-item (click)="favoritos()">
+        <ion-icon name="heart" class="favo" color="primary"></ion-icon>
+        <span class="spanmenu">Favoritos</span>  
+      </button>
+      <button menuClose ion-item (click)="contato()">
+        <img src="../assets/imgs/contato.png" class="icomenu">
+        <span class="spanmenu">Contato</span>  
+      </button>
+      <button menuClose ion-item (click)="sair()">
+        <img src="../assets/imgs/sair.png" class="icomenu">
+        <span class="spanmenu">Sair</span>  
+      </button>
     </ion-list>
+
+
+    <div class="infos">
+
+      <ion-grid *ngIf="isCarregando">
+        <ion-row>
+          <ion-col col-11>
+            <div class="bateria1">
+              <div class="bateria2" [ngStyle]="{'width': stat?.level+'%'}">
+                <span>{{carga}}%</span>
+              </div>
+            </div>
+          </ion-col>
+          <ion-col col-1><div class="ponta"></div></ion-col>
+        </ion-row>
+      </ion-grid>
+
+      <ion-grid *ngIf="isCarga">
+        <ion-row>
+          <ion-col col-11>
+            <div class="bateria1">
+              <div class="bateria3" [ngStyle]="{'width': stat?.level+'%'}">
+                <span>{{carga}}%</span>
+              </div>
+            </div>
+          </ion-col>
+          <ion-col col-1><div class="ponta"></div></ion-col>
+        </ion-row>
+      </ion-grid>
+
+     </div>
+
   </ion-content>
 
 </ion-menu>

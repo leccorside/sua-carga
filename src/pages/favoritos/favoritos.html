@@ -1,0 +1,89 @@
+<ion-header >
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Favoritos</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content 
+    pullingIcon="ios-refresh" 
+    refreshingSpinner="lines">
+    </ion-refresher-content>
+  </ion-refresher>
+
+  <div class="card2" *ngIf="pontos.length > 0;">
+
+    <ion-card class="cardlist" *ngFor="let ponto of pontos" (click)="detalhes(ponto, distancia, tempo)">
+
+      <ion-badge class="tipo" item-end>{{ponto.tipo}}</ion-badge>
+
+      <img src="{{ponto.foto}}"/>
+
+      <ion-card-content>
+        <ion-card-title>
+          {{ponto.nome}}
+        </ion-card-title>
+
+          <p class="catponto">{{ponto.categoria}}</p>
+          <p class="preco-produto">{{ponto.endereco}}</p>
+
+      </ion-card-content>
+    </ion-card>
+
+    <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+      <ion-infinite-scroll-content></ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+
+
+  </div>
+
+
+  <div class="previa" *ngIf="isLoading">
+    <ion-card class="cardlist">
+      <span class="skeleton-box" style="width:100%; height: 160px;"></span>
+      <div class="contentprevia">
+        <span class="skeleton-box tituloprevia"></span>
+        <span class="skeleton-box catprevia"></span><br>
+        <span class="skeleton-box endprevia"></span><br>
+        <span class="skeleton-box end2previa"></span>
+      </div>
+    </ion-card>
+
+    <ion-card class="cardlist">
+      <span class="skeleton-box" style="width:100%; height: 160px;"></span>
+      <div class="contentprevia">
+        <span class="skeleton-box tituloprevia"></span>
+        <span class="skeleton-box catprevia"></span><br>
+        <span class="skeleton-box endprevia"></span><br>
+        <span class="skeleton-box end2previa"></span>
+      </div>
+    </ion-card>
+
+    <ion-card class="cardlist">
+      <span class="skeleton-box" style="width:100%; height: 160px;"></span>
+      <div class="contentprevia">
+        <span class="skeleton-box tituloprevia"></span>
+        <span class="skeleton-box catprevia"></span><br>
+        <span class="skeleton-box endprevia"></span><br>
+        <span class="skeleton-box end2previa"></span>
+      </div>
+    </ion-card>
+  </div>
+
+
+  <div class="card2" *ngIf="nada">
+  <!--<div class="card2" *ngIf="pontos.length < 1;">-->
+    <div class="nadabuscado">
+      <ion-icon name="ios-warning-outline" color="primary" class="icobusca"></ion-icon>
+      <h3>Nenhum favorito!</h3>
+    </div>
+  </div>
+
+
+
+</ion-content>

@@ -1,0 +1,111 @@
+page-detalhes {
+    .icofechar{
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        z-index: 999;
+        font-size: 25px;
+        color: #fff;
+    }
+
+    ion-content{
+        --ion-background-color: transparent !important;
+    }
+
+    .itemdist{
+        margin-top: -40px;
+        background: transparent;
+    }
+
+    .catponto{
+        color: #83AB38;
+    }
+
+    .imgtop{
+        position:relative;
+        display:inline-block;
+    }
+
+    /*.imgtop:after {
+        content:'';
+        position:absolute;
+        left:0; top:0;
+        width:100%; height:100%;
+        display:inline-block;
+        background: -moz-linear-gradient(top, rgba(0,47,75,0.5) 0%, rgba(0, 0, 0, 0.5) 100%); 
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0, 0, 0, 0.5)), color-stop(100%,rgba(0,47,75,0.5))); 
+        background: -webkit-linear-gradient(top, rgba(0,47,75,0.5) 0%,rgba(0, 0, 0, 0.5) 100%); 
+        background: -o-linear-gradient(top, rgba(0,47,75,0.5) 0%,rgba(0, 0, 0, 0.5) 100%); 
+        background: -ms-linear-gradient(top, rgba(0,47,75,0.5) 0%,rgba(0, 0, 0, 0.5) 100%); 
+        background: linear-gradient(to bottom, rgba(0,47,75,0.5) 0%,rgba(0, 0, 0, 0.5) 100%); 
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#002f4b', endColorstr='#00000000',GradientType=0 ); 
+      }*/
+
+    .img1{
+        object-fit: cover;
+        width: 100%;
+        height: 200px;
+        background-position: center center;
+        background-size: cover;
+        display: block;
+    }
+
+    .dados {
+        padding: 0 20px;
+        margin-bottom: 20px;
+    }
+
+    #map22{
+        height: 200px;
+        width: 100%;
+    }
+
+    .mapa{
+        position: relative;
+    }
+
+    .btnposition{
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 999;
+    }
+
+    .coracao-vazio{
+        color: #fff;
+        font-size: 25px;
+        display: block;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        z-index: 999;
+        background-color: var(--tema);
+        padding: 4px 7px;
+        border-radius: 50%;
+
+      }
+    
+      .coracao-vazio:before{
+        position: relative;
+        top: 1px;
+      }
+    
+      .coracao-cheio{
+        color: #fff;
+        font-size: 25px;
+        display: block;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        z-index: 999;
+        background-color: var(--tema);
+        padding: 4px 7px;
+        border-radius: 50%;
+      }
+    
+      .coracao-cheio:before{
+        position: relative;
+        top: 1px;
+      }
+
+}

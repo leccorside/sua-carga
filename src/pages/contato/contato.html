@@ -1,0 +1,30 @@
+<ion-header >
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Contato</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <div class="form">
+
+    <ion-icon ios="ios-mail-outline" md="ios-mail-outline" color="primary" class="email"></ion-icon>
+
+    <p>Para dúvidas, sugestões
+      ou contato comercial,
+      entre em contato</p>
+
+      <div class="formulario">
+        <ion-input type="text" class="input2" placeholder="Nome" [(ngModel)]="nome"></ion-input>
+        <ion-input type="text" class="input2" placeholder="E-mail" [(ngModel)]="email"></ion-input>
+        <ion-input type="tel" class="input2" placeholder="Telefone" [(ngModel)]="telefone" maxlength="15" [brmasker]="{phone: true}"></ion-input>
+        <ion-textarea class="inputmsg" placeholder="mensagem" [(ngModel)]="mensagem"></ion-textarea>
+        <button ion-button round block class="btn2" (click)="enviar()">Enviar</button>
+      </div>
+
+  </div>
+
+</ion-content>

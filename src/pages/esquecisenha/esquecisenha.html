@@ -1,0 +1,29 @@
+
+<ion-content>
+
+  <div class="topo">
+    <!--<img src="../../assets/imgs/intro1.png" class="fundointro1">-->
+    <div class="logo">
+      <img src="../../assets/imgs/logo-vertical.png" class="imgintro1">
+    </div>
+
+    <div class="form">
+
+      <label class="label1">Recupere sua senha</label>
+      <div class="campos">
+        <ion-input type="text" class="inputlogin" placeholder="E-mail" [(ngModel)]="email"></ion-input>
+        <button ion-button round class="btn2" (click)="recuperar()">Recuperar</button>
+
+      </div>
+   
+    </div>
+    
+  </div>
+
+  <div class="nav2">
+   Voltar ao<br>
+    <span (click)="login()">Login</span>  
+  </div>
+
+
+</ion-content>

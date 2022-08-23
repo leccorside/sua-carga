@@ -15,6 +15,12 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script type="text/javascript" src="assets/js/vanilla-masker.min.js"></script>
+  <script type="text/javascript" src="assets/js/maskphone.js"></script>
+  <script src="assets/js/script.js"></script>
+
+
   <!-- cordova.js required for cordova apps (remove if not needed) -->
   <script src="cordova.js"></script>
 
@@ -29,11 +35,17 @@
 
   <link href="build/main.css" rel="stylesheet">
 
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBuAUaYKvXDJfYCbEvgNuT8-rOvDEShM6M&libraries=geometry">
+</script>
+
 </head>
 <body>
 
   <!-- Ionic's root component and where the app will load -->
   <ion-app></ion-app>
+
+  
+
 
   <!-- The polyfills js is generated during the build process -->
   <script src="build/polyfills.js"></script>
@@ -45,5 +57,7 @@
   <!-- The main bundle js is generated during the build process -->
   <script src="build/main.js"></script>
 
+
 </body>
+
 </html>
